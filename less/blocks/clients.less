@@ -1,0 +1,118 @@
+.clients {
+  width: 100%;
+}
+
+.clients__wrapper {
+  min-height: inherit;
+  padding: 50px 27px 70px;
+
+  @media (min-width: @desktop-width) {
+    padding: 125px 110px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+}
+
+.clients__title {
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 45px;
+    flex-basis: 100%;
+  }
+}
+
+.clients__list {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1144px;
+    margin: 50px 30px auto 0;
+    justify-content: start;
+  }
+}
+
+.clients__item {
+  height: 106px;
+  margin-bottom: 25px;
+
+  &:nth-child(1) .clients__image,
+  &:nth-child(4) .clients__image {
+    width: 183px;
+  }
+
+  &:nth-child(2) .clients__image,
+  &:nth-child(3) .clients__image {
+    width: 113px;
+  }
+
+  &:nth-child(6) ~ .clients__item {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 328px;
+    height: 137px;
+    margin: 0 60px 45px 0;
+
+    &:nth-child(1) .clients__image,
+    &:nth-child(4) .clients__image {
+      width: 328px;
+    }
+  
+    &:nth-child(2) .clients__image,
+    &:nth-child(3) .clients__image {
+      width: 328px;
+    }
+  
+    &:nth-child(6) ~ .clients__item {
+      display: revert;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.clients__image {
+  width: 100%;
+  height: 100%;
+}
+
+.clients__description {
+  margin-top: 50px;
+  flex-basis: 281px;
+}
+
+.clients__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 165%;
+  margin: 0 0 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.clients__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #EC17FF;
+  text-decoration: none;
+  position: relative;
+  .arrow-right(75px, #EC17FF, -90px);
+}

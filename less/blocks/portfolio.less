@@ -1,0 +1,52 @@
+.portfolio {
+  width: 100%;
+}
+
+.portfolio__wrapper {
+  padding: 60px 27px 230px;
+}
+
+.portfolio__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  text-align: center;
+  margin: 0 0 75px;
+}
+
+.portfolio__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+
+
+.portfolio__item {
+  position: relative;
+
+  &:hover .portfolio__submenu,
+  &:focus .portfolio__submenu {
+    display: revert;
+  }
+}
+
+.portfolio__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 165%;
+  color: @basic-white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
+}

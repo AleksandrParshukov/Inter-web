@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Inter-web</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body class="page-body">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="viber-icon">
+        <path d="M23.8 14.3c.7-6.2-.4-10.1-2.3-11.9-3.2-3-14-3.5-17.7.1C2.1 4.3 1.5 7 1.4 10.1c0 3.2-.1 9.2 5.5 10.8v2.5s0 1 .6 1.2c.7.2 1-.2 3.3-3a21 21 0 007.1-.5c.8-.3 5.2-.8 5.9-6.8zm-12.6 5.6L8 23.7c-.2.3-.5.2-.5-.3v-4.1c-4.7-1.4-4.4-6.5-4.4-9.1 0-2.7.6-4.9 2-6.4 3.3-3 12.7-2.4 15.1-.1 3 2.5 2 9.9 2 10.1-.7 5-4.2 5.3-4.9 5.6-.3 0-2.8.7-6 .5z"/>
+        <path d="M12.6 4.4c-.4 0-.4.6 0 .6 3 0 5.5 2.2 5.6 6.1 0 .4.6.4.6 0 0-4.2-2.8-6.7-6.2-6.7z"/>
+        <path d="M16.6 10.5c0 .4.6.4.6 0 0-2.3-1.4-4.3-4.1-4.5-.4 0-.4.6 0 .7 2.3.1 3.5 1.7 3.5 3.8zM16 13.1c-.6-.3-1 0-1.3.2l-.4.6c-.3.3-.7.2-.7.2-3-.8-4-4-4-4s0-.5.3-.7l.6-.5c.3-.2.4-.7.2-1.2C9.9 6.3 9.4 5.8 9 5.4c-.2-.3-.7-.4-1-.1-1 .5-2 1.5-1.6 2.5.5 1 1.5 4.4 4.6 7 1.4 1.1 3.7 2.4 4.7 2.6 1 .4 2-.6 2.5-1.6.2-.4.1-.8-.2-1.1-.6-.6-1.5-1.2-2.2-1.6z"/>
+        <path d="M13.5 8.3c1 0 1.5.6 1.5 1.7 0 .4.7.3.6 0 0-1.5-.7-2.2-2-2.3-.4 0-.5.6 0 .6z"/>
+      </symbol>
+
+      <symbol id="telegram-icon">
+        <path d="M6.7 13.9l3 7.7 4-4 6.9 5.4 4.9-21.3-24.6 10 5.8 2.2zm-2-2.3l11.8-4.7-9.3 5.6-2.4-.9zm14-4.3l-7.9 7.1-1 3.6-1.7-4.4 10.5-6.3zm-7.3 10.6L12 16l.7.6-1.2 1.2zm8.3 2.5l-7.1-5.6L23.3 5l-3.6 15.4z"/>
+      </symbol>
+
+      <symbol id="whatsapp-icon">
+        <path d="M6.8 23.2c1.9 1.2 4 1.8 6.3 1.8 6.8 0 12.3-5.5 12.3-12.3A12.3 12.3 0 102.5 19L.9 25l6-1.8zM2.3 12.7a10.9 10.9 0 115 9.1l-.3-.1-4 1.2 1.1-4-.1-.4a10.9 10.9 0 01-1.7-5.8z"/>
+        <path d="M6.8 10.4c.2 1.3 1 3.7 3 5.7s4.5 2.8 5.7 3c1.5.3 3.6.3 4.6-.7l.6-.6a1.5 1.5 0 000-2.1l-2.3-2.3a1.5 1.5 0 00-2.2 0l-.6.6a1 1 0 01-1.3 0L12 11.6a.9.9 0 010-1.3l.5-.6c.6-.6.6-1.5 0-2.1l-2.2-2.3c-.6-.6-1.6-.6-2.2 0l-.6.5c-.8.9-1 2.6-.7 4.6zm1.7-3.5l.7-.6 2.4 2.3v.1l-.6.6c-1 .9-1 2.4 0 3.3l2.2 2.4c1 .9 2.5.9 3.5 0l.5-.6h.2l2.3 2.4-.6.6c-.4.4-1.7.6-3.3.3-1-.2-3.2-.8-5-2.6a9.7 9.7 0 01-2.6-5c-.3-1.6 0-2.9.3-3.2z"/>
+      </symbol>
+
+      <symbol id="arrow-btn">
+        <circle cx="17.5" cy="17.5" r="17" fill="none"/>
+        <path d="M18.4 6.6a.5.5 0 00-.8 0l-3.1 3.2a.5.5 0 10.7.7L18 7.7l2.8 2.8a.5.5 0 10.7-.7l-3.1-3.2zm.1 22.4V7h-1v22h1z" stroke="none"/>
+      </symbol>
+    </svg>
+
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <p class="page-header__logo logo">Inter-web</p>
+
+        <nav class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О нас</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Услуги</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">Порядок работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Этапы работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Новости</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <button class="main-nav__button" type="button"></button>
+        </nav>
+
+        <div class="main-nav__contacts header-contacts">
+          <a class="header-contacts__link" href="tel:+78005569874">
+            8 800-556-98-74
+          </a>
+          <button class="header-contacts__button" type="button">Заказать звонок</button>
+          <ul class="header-contacts__list">
+            <li class="header-contacts__item">
+              <a class="header-contacts__social-link" href="">
+                <svg viewBox="0 0 25 25" width="15" height="15" fill="#EC17FF">
+                  <use xlink:href="#viber-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="header-contacts__social-link" href="">
+                <svg viewBox="0 0 25 25" width="15" height="15" fill="#2DC2FF">
+                  <use xlink:href="#telegram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="header-contacts__social-link" href="">
+                <svg viewBox="0 0 25 25" width="15" height="15" fill="#2FFFBF">
+                  <use xlink:href="#whatsapp-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title visually-hidden">Inter-web</h1>
+
+      <ol class="slider">
+        <li class="slider__item" value="0">
+          <section class="banner">
+            <div class="banner__wrapper wrapper">
+              <p class="banner__text">Нам Вы можете полностью доверить создание, доработку и продвижение сайта.</p>
+              <p class="banner__caption">Первая веб-студия с постоплатой по факту выполненной работы</p>
+              <button class="banner__button" type="button">Оставить заявку</button>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item" value="1">
+          <section class="about">
+            <div class="about__wrapper wrapper">
+              <h2 class="visually-hidden">О нас</h2>
+              <p class="about__caption">Мы всегда отслеживаем новые тенденции и на их основе предлагаем уникальные предложения. </p>
+              
+              <ul class="about__list">
+                <li class="about__item">
+                  <p class="about__point"><span class="about__value" style="color: #E78E76;">10</span><br>лет на рынке</p>
+                  <p class="about__description">
+                    Агентство “Inter-web” существует на рынке более 10 лет. 
+                    За все время работы мы успели построить доверительные 
+                    отношения со всеми клиентами и показать весь наш 
+                    профессионализм в работе.
+                  </p>
+                </li>
+                <li class="about__item">
+                  <p class="about__point"><span class="about__value" style="color: #7DEBDF;">75</span><br>специалистов в штате</p>
+                  <p class="about__description">
+                    У нас идет строгий отбор сотрудников фирмы.
+                    В агентстве “Inter&#8209;web” работают исключительно 
+                    профессионалы своего дела.
+                  </p>
+                </li>
+                <li class="about__item">
+                  <p class="about__point"><span class="about__value" style="color: #4AB5FF;">150</span><br>выполненных проектов</p>
+                  <p class="about__description">
+                    За плечами более *количество* успешно 
+                    сделанных и работающих сайтов.
+                  </p>
+                </li>
+              </ul>
+              
+              <aside class="about__aside aside">
+                <p class="aside__text">
+                  Веб-студия Inter-web – это <br> возможность 
+                  <span class="aside__text aside__text--highlighted">заявить о себе</span>
+                </p>
+              </aside>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item" value="2">
+          <section class="services">
+            <div class="services__wrapper wrapper">
+              <h2 class="services__title">Наши услуги</h2>
+    
+              <ul class="services__list">
+                <li class="services__item">
+                  <a class="services__link">Сайт-визитка</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">Landing page</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link services__link--current">Интернет-магазин</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">Корпоративный сайт</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">1C Битрикс</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">Контекстная реклама</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">SEO оптимизация</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">Продвижение в соц. сетях</a>
+                </li>
+                <li class="services__item">
+                  <a class="services__link">Контент-маркетинг</a>
+                </li>
+              </ul>
+    
+              <ul class="services__nav">
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn services__nav-btn--current" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+                <li class="services__nav-item">
+                  <button class="services__nav-btn" type="button"></button>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item" value="3">
+          <section class="stages"> 
+            <div class="stages__wrapper wrapper">
+              <h2 class="stages__title">Порядок работы</h2>
+              <p class="stages__text">
+                Вы можете связаться с нами любым удобным для вас способом.<br>
+                Мы всегда готовы ответить в любое время
+              </p>
+              <picture>
+                <source media="(min-width:1200px)" srcset="./img/stages-desktop.png">
+                <img class="stages__image" src="./img/stages-mobile.png" alt="Этапы работы">
+              </picture>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item" value="4">
+          <section class="clients">
+            <div class="clients__wrapper wrapper">
+              <h2 class="clients__title">Наши клиенты</h2>
+              <ul class="clients__list">
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+                <li class="clients__item">
+                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                </li>
+              </ul>
+      
+              <div class="clients__description">
+                <p class="clients__text">
+                  Поработали с такими компаниями, как банки, ритейл, 
+                  автомобильными брендами,  и другими.
+                </p>
+                <a class="clients__link" href="#">Стать нашим клиентом</a>
+              </div>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item" value="5">
+          <section class="portfolio">
+            <div class="portfolio__wrapper wrapper">
+              <h2 class="portfolio__title">Портфолио</h2>
+              <ul class="portfolio__list">
+                <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">Комплексное продвижение</a>
+                </li>
+                <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">Медиа-маркетинг</a>
+                </li>
+                <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">Веб-разработка</a>
+                  <ul class="portfolio__submenu submenu">
+                    <li class="submenu__item">
+                      <a class="submenu__link" href="#">Landing page</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link" href="#">Сайт-визитка</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link" href="#">Интернет-магазин</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link" href="#">Корпоративный сайт</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">Брендинг</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li class="slider__item slider__item--current" value="6">
+          <section class="news">
+            <div class="news__wrapper wrapper">
+              <h2 class="news__title">Все новости</h2>
+              <div class="news__menu-wrap">
+                <button class="news__button">Категории</button>
+                <ul class="news__menu news__menu--closed">
+                  <li class="news__menu-item">
+                    <a class="news__menu-link news__menu-link--current">Дизайн</a>
+                  </li>
+                  <li class="news__menu-item">
+                    <a class="news__menu-link">Маркетинг</a>
+                  </li>
+                  <li class="news__menu-item">
+                    <a class="news__menu-link">Разработка</a>
+                  </li>
+                  <li class="news__menu-item">
+                    <a class="news__menu-link">Брендинг</a>
+                  </li>
+                </ul>
+              </div>
+    
+              <ul class="news__list">
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+                <li class="news__item">
+                  <img class="news__image" src="https://via.placeholder.com/320x279" width="320" height="279" alt="">
+                  <p class="news__date">01.03.2021</p>
+                  <p class="news__topic">Важная новость 1</p>
+                  <p class="news__text">Текст новости</p>
+                  <a class="news__link" href="#">Читать полностью</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="slider__item" value="7">
+          <section class="page-footer">
+            <div class="page-footer__wrapper wrapper">
+              <div class="page-footer__nav footer-nav">
+                <div class="footer-nav__wrapper wrapper">
+                  <h2 class="visually-hidden">Навигация по сайту</h2>
+                  <div class="footer-nav__list-container">
+                    <p class="footer-nav__name">Клиентам</p>
+                    <ul class="footer-nav__list">
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Главная</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Услуги</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">О нас</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Портфолио</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+          
+                  <div class="footer-nav__list-container">
+                    <p class="footer-nav__name">Услуги</p>
+                    <ul class="footer-nav__list">
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Веб-разработка</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Комплексное продвижение</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Брендинг</a>
+                      </li>
+                      <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#">Медиа-маркетинг</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="page-footer__contacts contacts">
+                <div class="contacts__wrapper">
+                  <h2 class="contacts__title">Обсудить Ваш проект</h2>
+                  <form class="contacts__form">
+                    <label class="visually-hidden" for="name">Имя</label>
+                    <input class="contacts__input" type="text" name="name" id="name" placeholder="Ваше имя">
+                    <label class="visually-hidden" for="tel">Телефон</label>
+                    <input class="contacts__input" type="tel" name="tel" id="tel" placeholder="Ваш телефон">
+                    <button class="contacts__button" type="submit">Заказать звонок</button>
+                  </form>
+      
+                  <p class="contacts__logo logo">Inter-web</p>
+      
+                  <div class="contacts__list-container">
+                    <p class="contacts__name">Услуги</p>
+                    <ul class="contacts__list">
+                      <li class="contacts__item">
+                        <a class="contacts__text" href="tel:+78005569874">8 800-556-98-74</a>
+                      </li>
+                      <li class="contacts__item">
+                        <p class="contacts__text">г. Город, ул. Улица, дом 9</p>
+                      </li>
+                      <li class="contacts__item">
+                        <p class="contacts__text">Работаем с 10:00 до 20:00<br>
+                          (без выходных)</p>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="contacts__map-container">
+                    <img class="contacts__map" src="./img/map.jpg" width="1145" height="1080" alt="Карта">
+                  </div>
+      
+                  <ul class="contacts__social social">
+                    <li class="social__item">
+                      <a class="social__link" href="#">
+                        <svg viewBox="0 0 25 25" width="25" height="25" fill="#FFFFFF">
+                          <use xlink:href="#viber-icon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#">
+                        <svg viewBox="0 0 25 25" width="25" height="25" fill="#FFFFFF">
+                          <use xlink:href="#telegram-icon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#">
+                        <svg viewBox="0 0 25 25" width="25" height="25" fill="#FFFFFF">
+                          <use xlink:href="#whatsapp-icon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </li>
+      </ol>
+
+      <div class="slider-nav">
+        <button class="slider-nav__button slider-nav__button--prev" disabled>
+          <svg viewBox="0 0 35 35" width="35" height="35" fill="#FFFFFF" stroke="#FFFFFF">
+            <use xlink:href="#arrow-btn"></use>
+          </svg>
+        </button>
+
+        <ol class="slider-nav__list">
+          <li class="slider-nav__item slider-nav__item" value="0">
+            <button class="slider-nav__radio slider-nav__radio--current"></button>
+          </li>
+          <li class="slider-nav__item" value="1">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="2">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="3">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="4">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="5">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="6">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="7">
+            <button class="slider-nav__radio"></button>
+          </li>
+        </ol>
+
+        <button class="slider-nav__button slider-nav__button--next">
+          <svg viewBox="0 0 35 35" width="35" height="35" fill="#FFFFFF" stroke="#FFFFFF">
+            <use xlink:href="#arrow-btn"></use>
+          </svg>
+        </button>
+      </div>
+
+    </main>
+
+    <script src="js/slider.js"></script>
+  </body>
+</html>

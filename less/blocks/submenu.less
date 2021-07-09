@@ -1,0 +1,28 @@
+.submenu {
+  list-style: none;
+  padding: 30px 10px;
+  margin: 0;
+  background-color: #000000;
+}
+
+.submenu__item {
+  margin-bottom: 5px;
+  .submenu-colors();
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.submenu__link {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    font-weight: 600;
+  }
+}

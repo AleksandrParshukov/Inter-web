@@ -1,0 +1,65 @@
+.banner {
+  width: 100%;
+}
+
+.banner__wrapper {
+  padding: 140px 0 170px 27px;
+  background-image: url("../img/banner-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @media (min-width: @laptop-width) {
+    padding: 360px 110px 220px 250px;
+    background-image: url("../img/banner-bg-desktop.jpg");
+  }
+}
+
+.banner__text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 135%;
+  width: 250px;
+  margin: 0;
+
+  @media (min-width: @laptop-width) {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 200%;
+    width: 1200px;
+  }
+}
+
+.banner__caption {
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  width: 250px;
+  margin: 15px 0 60px;
+
+  @media (min-width: @laptop-width) {
+    font-weight: 800;
+    font-size: 61px;
+    width: 1200px;
+    margin: 45px 0 155px;
+  }
+}
+
+.banner__button {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: @basic-white;
+  padding: 11px 16px;
+  background: rgba(6, 9, 13, 0.15);
+  background-image: linear-gradient(to right, #CC673D 0%, #AE5388  20%, #596BA9 40%, #46B29D 60%, #36AFC9 80%, #093FAD 100%);
+  border: none;
+  box-sizing: border-box;
+
+  @media (min-width: @laptop-width) {
+    font-weight: 800;
+    font-size: 29px;
+    line-height: 39px;
+    padding: 21px 70px;
+  }
+}

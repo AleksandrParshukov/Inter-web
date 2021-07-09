@@ -1,0 +1,19 @@
+.slider {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: revert;
+  }
+
+  @media (min-width: @desktop-width) {
+    & section {
+      min-height: 1080px;
+    }
+  }
+}

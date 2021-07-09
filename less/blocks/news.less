@@ -1,0 +1,144 @@
+.news {
+  width: 100%;
+  background-image: url("../img/noise.png");
+}
+
+.news__wrapper {
+  min-height: inherit;
+  padding: 20px 27px 70px;
+
+  @media (min-width: @desktop-width) {
+    padding: 170px 110px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.news__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 70px;
+    margin-bottom: 190px;
+    flex-basis: 100%;
+  }
+}
+
+.news__menu-wrap {
+  margin: 56px 0 60px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.news__button {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 165%;
+  color: @basic-white;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("../img/triangle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: absolute;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+
+    &::after {
+      display: 0;
+    }
+  }
+}
+
+.news__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.news__menu-item {
+  margin-bottom: 5px;
+}
+
+.news__menu-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 165%;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
+}
+
+.news__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news__item {
+  font-weight: 600;
+  line-height: 165%;
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(3n) ~ .news__item {
+    display: none;
+  }
+}
+
+.news__date {
+  font-size: 14px;
+}
+
+.news__topic {
+  font-size: 19px;
+}
+
+.news__text {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.news__link {
+  font-size: 15px;
+  line-height: 23px;
+  color: @basic-white;
+  text-decoration: none;
+  padding-right: 40px;
+  margin-left: auto;
+  position: relative;
+  .arrow-right(30px, @basic-white, 0)
+}

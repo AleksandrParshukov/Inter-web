@@ -1,13 +1,34 @@
 .footer-nav {
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: fit-content;
+    margin: 200px 0 0 120px;
+  }
 }
 
 .footer-nav__wrapper {
   padding: 0 0 10px 27px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    display: flex;
+  }
 }
 
 .footer-nav__list-container {
   margin-bottom: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 50px 0 0;
+  }
+}
+
+.footer-nav__name {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 165%;
+  margin: 0;
 }
 
 .footer-nav__list {
@@ -15,13 +36,13 @@
   min-width: 163px;
   width: fit-content;
   padding: 34px 0 0;
-  margin: 0;
+  margin: 40px 0 0;
   border-top: 1px solid rgba(196, 196, 196, 0.25);
 }
 
 .footer-nav__item {
   width: inherit;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   .submenu-colors();
 

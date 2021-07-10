@@ -8,7 +8,7 @@
   padding: 20px 27px 70px;
 
   @media (min-width: @desktop-width) {
-    padding: 170px 110px;
+    padding: 170px 100px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -29,10 +29,15 @@
 
 .news__menu-wrap {
   margin: 56px 0 60px;
+  box-sizing: border-box;
   position: relative;
 
   @media (min-width: @desktop-width) {
+    width: 294px;
+    padding: 25px 0 0 35px;
     margin: 0;
+    background-color: @fade-purple;
+    order: 3;
   }
 }
 
@@ -61,10 +66,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    font-weight: 600;
+    font-size: 27px;
+    margin: 0 0 40px;
 
     &::after {
-      display: 0;
+      display: none;
     }
   }
 }
@@ -80,10 +87,23 @@
   &--closed {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    position: static;
+
+    &--closed {
+      display: revert;
+    }
+  }
 }
 
 .news__menu-item {
   margin-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .news__menu-link {
@@ -95,12 +115,23 @@
   &:focus {
     font-weight: 700;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 23px;
+  }
 }
 
 .news__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1246px;
+    margin-right: 140px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .news__item {
@@ -117,19 +148,44 @@
   &:nth-child(3n) ~ .news__item {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 50px 100px 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n) ~ .news__item {
+      display: flex;
+    }
+  }
+}
+
+.news__image {
+  width: 320px;
+  height: 279px;
+  margin-bottom: 25px;
+
+  @media (min-width: @desktop-width) {
+    width: 380px;
+  }
 }
 
 .news__date {
   font-size: 14px;
+  margin: 0;
 }
 
 .news__topic {
   font-size: 19px;
+  margin: 10px 0 15px;
 }
 
 .news__text {
   font-weight: 400;
   font-size: 15px;
+  margin: 0;
 }
 
 .news__link {
@@ -138,7 +194,7 @@
   color: @basic-white;
   text-decoration: none;
   padding-right: 40px;
-  margin-left: auto;
+  margin: 25px 0 0 auto;
   position: relative;
   .arrow-right(30px, @basic-white, 0)
 }

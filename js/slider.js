@@ -1,3 +1,4 @@
+const pageHeader = document.querySelector('.page-header')
 const pageMain = document.querySelector('.page-main');
 const slider = pageMain.querySelector('.slider');
 const sliderItems = slider.querySelectorAll('.slider__item');
@@ -29,6 +30,8 @@ sliderNavItems.forEach(element => {
 function updateSliderList(index) {
   sliderBtnNext.disabled = false;
   sliderBtnPrev.disabled = false;
+  console.log(pageHeader);
+  pageHeader.classList.remove('page-header--closed');
 
   sliderNavList.querySelector('.slider-nav__radio--current').classList.remove('slider-nav__radio--current');
   sliderNavItems[index].firstElementChild.classList.add('slider-nav__radio--current');
@@ -37,6 +40,7 @@ function updateSliderList(index) {
 
   if (index === sliderNavItems.length - 1) {
     sliderBtnNext.disabled = true;
+    pageHeader.classList.add('page-header--closed');
   }
 
   if (index === 0) {

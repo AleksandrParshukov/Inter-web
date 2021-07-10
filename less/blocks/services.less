@@ -4,7 +4,7 @@
   background-size: 206px 300px;
   background-position: right 126px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     background-color: #090F14;
     background-image: url("../img/services-bg-desktop.png");
     background-size: auto 100%;
@@ -16,8 +16,12 @@
   min-height: inherit;
   padding: 52px 0 90px 27px;
 
+  @media (min-width: @laptop-width) {
+    padding: 140px 350px 0 20px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding: 150px 415px 0 120px;
+    padding: 150px 415px 0 100px;
   }
 }
 
@@ -27,6 +31,10 @@
   font-size: 28px;
   line-height: 140%;
   margin: 0;
+
+  @media (min-width: @laptop-width) {
+    font-size: 40px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
@@ -38,6 +46,10 @@
   width: fit-content;
   padding: 0;
   margin: 53px 0 18px;
+
+  @media (min-width: @laptop-width) {
+    margin: 50px 0 25px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 90px 0 35px;
@@ -68,9 +80,15 @@
     color: @basic-white;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     font-size: 18px;
-  
+
+    &--current {
+      font-size: 35px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     &--current {
       font-size: 40px;
     }
@@ -80,7 +98,7 @@
 .services__nav {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px;
   display: flex;
 }
 
@@ -88,6 +106,7 @@
   width: 8px;
   height: 8px;
   margin-right: 7px;
+  display: flex;
 }
 
 .services__nav-btn {

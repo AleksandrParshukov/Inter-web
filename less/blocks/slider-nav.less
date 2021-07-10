@@ -1,11 +1,20 @@
 .slider-nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  right: 110px;
-  top: 350px;
   z-index: 2;
+
+  @media (min-width: @laptop-width) {
+    display: flex;
+    top: 240px;
+    right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 110px;
+    top: 350px;
+  }
 }
 
 .slider-nav__button {
@@ -25,7 +34,7 @@
 .slider-nav__list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 15px 0 25px;
 }
 
 .slider-nav__item {

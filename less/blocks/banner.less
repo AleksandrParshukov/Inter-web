@@ -1,16 +1,25 @@
 .banner {
   width: 100%;
-}
-
-.banner__wrapper {
-  padding: 140px 0 170px 27px;
   background-image: url("../img/banner-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom right;
 
   @media (min-width: @laptop-width) {
-    padding: 360px 110px 220px 250px;
     background-image: url("../img/banner-bg-desktop.jpg");
+    background-size: auto 76.2%;
+  }
+}
+
+.banner__wrapper {
+  min-height: inherit;
+  padding: 140px 0 170px 27px;
+
+  @media (min-width: @laptop-width) {
+    padding: 160px 110px 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 360px 110px 220px 250px;
   }
 }
 
@@ -23,8 +32,13 @@
 
   @media (min-width: @laptop-width) {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 200%;
+    width: 850px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 25px;
     width: 1200px;
   }
 }
@@ -39,6 +53,12 @@
 
   @media (min-width: @laptop-width) {
     font-weight: 800;
+    font-size: 44px;
+    width: 850px;
+    margin: 55px 0 150px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 61px;
     width: 1200px;
     margin: 45px 0 155px;
@@ -58,6 +78,12 @@
 
   @media (min-width: @laptop-width) {
     font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 15px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 29px;
     line-height: 39px;
     padding: 21px 70px;

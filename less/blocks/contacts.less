@@ -2,7 +2,7 @@
   width: 100%;
   background-color: @basic-purple;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     width: 50%;
     background-color: transparent;
     background-image: url("../img/noise.png");
@@ -15,11 +15,17 @@
   padding: 30px 27px 85px;
   box-sizing: border-box;
 
+  @media (min-width: @laptop-width) {
+    width: 350px;
+    padding: 60px 35px 80px 30px;
+    margin-left: 200px;
+    background-color: @basic-purple;
+  }
+
   @media (min-width: @desktop-width) {
     width: 565px;
     padding: 200px 45px 120px 40px;
     margin-left: 275px;
-    background-color: @basic-purple;
   }
 }
 
@@ -33,6 +39,10 @@
 .contacts__form {
   padding: 0;
   margin: 50px 0 75px;
+
+  @media (min-width: @laptop-width) {
+    margin: 30px 0 40px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 50px 0 245px;
@@ -63,6 +73,10 @@
   padding: 7px 20px 10px;
   margin-top: 20px;
 
+  @media (min-width: @laptop-width) {
+    margin-top: 0;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 45px auto 0;
   }
@@ -74,6 +88,10 @@
 
 .contacts__list-container {
   margin: 75px 0;
+
+  @media (min-width: @laptop-width) {
+    margin: 20px 0 30px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 30px 0 50px;
@@ -128,7 +146,7 @@
 .contacts__map-container {
   margin-left: -27px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     width: 43px;
     height: 100%;
     margin: 0;
@@ -149,7 +167,7 @@
   height: 354px;
   object-fit: fill;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     width: 0;
     height: 100%;
     transition: width 0.3s;
@@ -167,7 +185,7 @@
   color: @basic-white;
   display: none;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     height: 43px;
     padding: 10px 25px;
     background-color: @basic-purple;
@@ -176,10 +194,14 @@
     display: revert;
     position: absolute;
     right: 0;
-    top: 690px;
+    top: 390px;
     transform: rotate(-90deg) translateY(-100%);
     transform-origin: right top;
     z-index: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 690px;
   }
 }
 

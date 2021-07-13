@@ -1,0 +1,88 @@
+.online-store {
+  background-image: url("../img/services-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 206px 300px;
+  background-position: right 126px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @laptop-width) {
+    background-color: #090F14;
+    background-image: url("../img/services-bg-desktop.png");
+    background-size: auto 100%;
+    background-position: right top;
+  }
+}
+
+.online-store__wrapper {
+  height: 100%;
+  padding: 190px 100px 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.online-store__title {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  margin: 0;
+  flex-basis: 100%;
+}
+
+.online-store__container {
+  width: min-content;
+  margin-bottom: 45px;
+}
+
+.online-store__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 165%;
+  width: 600px;
+  margin: 95px 0 145px;
+}
+
+.online-store__caption {
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 165%;
+  margin: 0 0 45px;
+}
+
+.online-store__list {
+  list-style: none;
+  width: 800px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.online-store__item {
+  width: 320px;
+  margin: 0 160px 65px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.online-store__image {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 20px;
+}
+
+.online-store__item-text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 145%;
+  margin: 0;
+}

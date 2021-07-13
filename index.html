@@ -101,8 +101,8 @@
     <main class="page-main">
       <h1 class="page-main__title visually-hidden">Inter-web</h1>
 
-      <ol class="slider">
-        <li class="slider__item" value="0">
+      <ul class="slider">
+        <li class="slider__item">
           <section class="banner">
             <div class="banner__wrapper wrapper">
               <p class="banner__text">Нам Вы можете полностью доверить создание, доработку и продвижение сайта.</p>
@@ -112,7 +112,7 @@
           </section>
         </li>
 
-        <li class="slider__item" value="1">
+        <li class="slider__item">
           <section class="about">
             <div class="about__wrapper wrapper">
               <h2 class="visually-hidden">О нас</h2>
@@ -155,7 +155,7 @@
           </section>
         </li>
 
-        <li class="slider__item" value="2">
+        <li class="slider__item slider__item--current" value="2">
           <section class="services">
             <div class="services__wrapper wrapper">
               <h2 class="services__title">Наши услуги</h2>
@@ -167,7 +167,7 @@
                 <li class="services__item">
                   <a class="services__link">Landing page</a>
                 </li>
-                <li class="services__item">
+                <li class="services__item service">
                   <a class="services__link services__link--current">Интернет-магазин</a>
                 </li>
                 <li class="services__item">
@@ -219,11 +219,105 @@
                   <button class="services__nav-btn" type="button"></button>
                 </li>
               </ul>
+
+              <ul class="services__content">
+                <li class="service">
+                  <ul class="service__list hor-slider">
+                    <li class="service__item hor-slider__item hor-slider__item--current">
+                      <div class="service__wrapper wrapper">
+                        <p class="service__caption">
+                          Созданные экспертами «Inter-web» сайты интернет-магазинов 
+                          имеют функциональность, необходимую для успешной онлайн-торговли.
+                        </p>
+                        <p class="service__text">Что входит в нашу работу:</p>
+                        
+                        <ul class="service__examples">
+                          <li class="service__example">+ Подготовка технического задания</li>
+                          <li class="service__example">+ Написание уникальных текстов</li>
+                          <li class="service__example">+ Разработка прототипа</li>
+                          <li class="service__example">+ Сбор семантики</li>
+                          <li class="service__example">+ Верстка макета</li>
+                          <li class="service__example">+ Тестирование и запуск</li>
+                          <li class="service__example">+ Интеграция дизайна</li>
+                          <li class="service__example">+ Подключение веб-аналитики</li>
+                        </ul>
+
+                        <button class="service__button button" type="button">Сделать заказ</button>
+                        <a class="service__link service__link--next hor-slider__link--next" href="#">Узнать подробнее</a>
+                      </div>
+                    </li>
+
+                    <li class="service__item online-store hor-slider__item">
+                      <div class="online-store__wrapper wrapper">
+                        <p class="online-store__title">Интернет-магазин под ключ</p>
+                        
+                        <div class="online-store__container">
+                          <p class="online-store__text">
+                            Интернет-магазин – прекрасный способ организовать эффективные 
+                            продажи через интернет. Функционал сайта регулярно дорабатывается 
+                            и совершенствуется. Бизнес, основная цель которого, получение 
+                            прибыли путём продажи товаров и услуг, нуждается в качественной 
+                            работе профессионалов.
+                          </p>
+
+                          <button class="online-store__button button" type="button">Сделать заказ</button>
+                        </div>
+
+                        <div class="online-store__container">
+                          <p class="online-store__caption">Преимущества использования Интернет-магазина</p>
+                          <ul class="online-store__list">
+                            <li class="online-store__item">
+                              <img class="online-store__image" src="./img/online-store-img1.svg" width="62" height="62" alt="Иконка кошелька">
+                              <p class="online-store__item-text">Для поддержания работы интернет-магазина требуется только оплата домена и хостинга</p>
+                            </li>
+                            <li class="online-store__item">
+                              <img class="online-store__image" src="./img/online-store-img2.svg" width="62" height="62" alt="Иконка команды">
+                              <p class="online-store__item-text">Владелец интернет-магазина получает доступ к огромной аудитории</p>
+                            </li>
+                            <li class="online-store__item">
+                              <img class="online-store__image" src="./img/online-store-img3.svg" width="62" height="62" alt="Иконка компьютера">
+                              <p class="online-store__item-text">Ваш магазин будет доступен покупателем 24 часа в сутки – 7 дней в неделю</p>
+                            </li>
+                            <li class="online-store__item">
+                              <img class="online-store__image" src="./img/online-store-img4.svg" width="62" height="62" alt="Иконка браузера">
+                              <p class="online-store__item-text">Команда хороших исполнителей способна запустить работающий онлайн-магазин за короткий срок</p>
+                            </li>
+                          </ul>
+                        </div>
+  
+                        <a class="service__link service__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                        <a class="service__link service__link--next hor-slider__link--next" href="#">Примеры работ</a>
+                      </div>
+                    </li>
+
+                    <li class="service__item gallery hor-slider__item">
+                      <div class="gallery__wrapper wrapper">
+                        <p class="gallery__title">Интернет-магазин под ключ</p>
+                        <a class="service__link service__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                        
+                        <div class="gallery__container">
+                          <ul class="gallery__list">
+                            <li class="gallery__item">
+                              <img class="gallery__image" src="https://via.placeholder.com/391x510" width="391" height="510" alt="">
+                            </li>
+                            <li class="gallery__item">
+                              <img class="gallery__image" src="https://via.placeholder.com/391x510" width="391" height="510" alt="">
+                            </li>
+                          </ul>
+
+                          <a class="gallery__link gallery__link--prev" href="#"></a>
+                          <a class="gallery__link gallery__link--next" href="#"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </section>
         </li>
 
-        <li class="slider__item" value="3">
+        <li class="slider__item">
           <section class="stages"> 
             <div class="stages__wrapper wrapper">
               <h2 class="stages__title">Порядок работы</h2>
@@ -239,7 +333,7 @@
           </section>
         </li>
 
-        <li class="slider__item" value="4">
+        <li class="slider__item">
           <section class="clients">
             <div class="clients__wrapper wrapper">
               <h2 class="clients__title">Наши клиенты</h2>
@@ -284,7 +378,7 @@
           </section>
         </li>
 
-        <li class="slider__item" value="5">
+        <li class="slider__item">
           <section class="portfolio">
             <div class="portfolio__wrapper wrapper">
               <h2 class="portfolio__title">Портфолио</h2>
@@ -320,7 +414,7 @@
           </section>
         </li>
 
-        <li class="slider__item" value="6">
+        <li class="slider__item">
           <section class="news">
             <div class="news__wrapper wrapper">
               <h2 class="news__title">Все новости</h2>
@@ -390,7 +484,7 @@
           </section>
         </li>
 
-        <li class="slider__item slider__item--current" value="7">
+        <li class="slider__item">
           <section class="page-footer">
             <div class="page-footer__wrapper">
               <div class="page-footer__nav footer-nav">
@@ -499,7 +593,7 @@
             </div>
           </section>
         </li>
-      </ol>
+      </ul>
 
       <div class="slider-nav">
         <button class="slider-nav__button slider-nav__button--prev" disabled>
@@ -546,5 +640,6 @@
 
     <script src="js/slider.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/horizontal-slider.js"></script>
   </body>
 </html>

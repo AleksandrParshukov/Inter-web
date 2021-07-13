@@ -3,6 +3,8 @@
   background-repeat: no-repeat;
   background-size: 206px 300px;
   background-position: right 126px;
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: @laptop-width) {
     background-color: #090F14;
@@ -121,4 +123,16 @@
   &--current {
     background-color: @basic-white;
   }
+}
+
+.services__content {
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

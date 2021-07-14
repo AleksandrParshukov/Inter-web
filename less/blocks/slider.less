@@ -5,21 +5,14 @@
 }
 
 .slider__item {
-  display: none;
-
-  &--current {
-    display: revert;
-  }
-
   @media (min-width: @laptop-width) {
-    & section {
-      min-height: 768px;
+    display: none;
+  
+    &--current {
+      display: revert;
     }
-  }
-
-  @media (min-width: @desktop-width) {
     & section {
-      min-height: 1080px;
+      min-height: 100vh;
     }
   }
 }

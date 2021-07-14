@@ -1,13 +1,19 @@
 .button {
   color: @basic-white;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @laptop-width) {
     font-weight: 700;
-    font-size: 27px;
-    line-height: 41px;
-    padding: 17px 47px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 13px 37px;
     background-color: transparent;
     border: 3px solid @basic-white;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 27px;
+    line-height: 41px;
+    padding: 17px 47px;
   }
 }

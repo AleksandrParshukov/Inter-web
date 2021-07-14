@@ -1,0 +1,38 @@
+.meeting {
+  position: relative;
+}
+
+.meeting__title {
+  font-family: 'Noto Serif', serif;
+  font-weight: 600;
+  line-height: 140%;
+  margin: 0;
+  display: none;
+  
+  @media (min-width: @laptop-width) {
+    font-size: 85px;
+    display: revert;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 125px;
+  }
+}
+
+.meeting__text {
+  @media (min-width: @laptop-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+  }
+}
+
+.meeting__num {
+  color: #DE3A9F;
+}

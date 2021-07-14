@@ -1,5 +1,6 @@
 const sliders = document.querySelectorAll('.hor-slider');
 
+
 sliders.forEach((slider) => {
   const buttonsNext = slider.querySelectorAll('.hor-slider__link--next');
   const buttonsPrev = slider.querySelectorAll('.hor-slider__link--prev');
@@ -10,7 +11,7 @@ sliders.forEach((slider) => {
     button.addEventListener('click', (evt) => {
       evt.preventDefault();
       currentIndex++;
-      slider.style.transform = `translateX(${-100*currentIndex}%)`;
+      updateSliderList(currentIndex);
     })
   })
 
@@ -18,7 +19,21 @@ sliders.forEach((slider) => {
     button.addEventListener('click', (evt) => {
       evt.preventDefault();
       currentIndex--;
-      slider.style.transform = `translateX(${100*currentIndex}%)`;
+      updateSliderList(currentIndex);
     })
   })
+
+  function updateSliderList(index) {
+    slider.style.transform = `translateX(${-100*currentIndex}%)`;
+  
+    if (slider.classList.contains('service__list')) {
+      const serviceContent = document.querySelector('.services__content');
+  
+      if (index === 0) {
+        serviceContent.style.left = '32%';
+      } else {
+        serviceContent.style.left = '0';
+      }
+    }
+  }
 })

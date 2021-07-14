@@ -1,0 +1,37 @@
+.realization {
+  position: relative;
+}
+
+.realization__title {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0;
+
+  @media (min-width: @laptop-width) {
+    font-size: 85px;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 125px;
+    top: 240px;
+  }
+}
+
+.realization__text {
+  @media (min-width: @laptop-width) {
+    margin-top: 200px;  
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 240px;  
+  }
+}
+
+.realization__num {
+  color: #5F30E5;
+}

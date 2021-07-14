@@ -16,55 +16,101 @@
 
 .online-store__wrapper {
   height: 100%;
-  padding: 190px 100px 90px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  align-content: flex-start;
+
+  @media (min-width: @laptop-width) {
+    padding: 150px 20px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 190px 100px 90px;
+  }
 }
 
 .online-store__title {
   font-family: 'Noto Serif', serif;
   font-weight: 400;
-  font-size: 52px;
   line-height: 140%;
   text-align: center;
   margin: 0;
   flex-basis: 100%;
+
+  @media (min-width: @laptop-width) {
+    font-size: 40px;
+    margin: 0 0 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 52px;
+    margin: 0 0 95px;
+  }
 }
 
 .online-store__container {
   width: min-content;
-  margin-bottom: 45px;
+
+  @media (min-width: @laptop-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .online-store__text {
   font-weight: 400;
-  font-size: 18px;
   line-height: 165%;
-  width: 600px;
-  margin: 95px 0 145px;
+
+  @media (min-width: @laptop-width) {
+    font-size: 14px;
+    width: 500px;
+    margin: 75px 0 115px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    width: 600px;
+    margin: 95px 0 145px;
+  }
 }
 
 .online-store__caption {
   font-weight: 600;
-  font-size: 27px;
   line-height: 165%;
   margin: 0 0 45px;
+
+  @media (min-width: @laptop-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 27px;
+  }
 }
 
 .online-store__list {
   list-style: none;
-  width: 800px;
   padding: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @laptop-width) {
+    width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 0 0 0 100px;
+  }
 }
 
 .online-store__item {
-  width: 320px;
-  margin: 0 160px 65px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,17 +118,42 @@
   &:nth-child(2n) {
     margin-right: 0;
   }
+
+  @media (min-width: @laptop-width) {
+    width: 240px;
+    margin: 0 20px 45px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 320px;
+    margin: 0 160px 65px 0;
+  }
 }
 
 .online-store__image {
-  width: 62px;
-  height: 62px;
-  margin-bottom: 20px;
+  @media (min-width: @laptop-width) {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 20px;
+  }
 }
 
 .online-store__item-text {
   font-weight: 400;
-  font-size: 19px;
   line-height: 145%;
   margin: 0;
+
+  @media (min-width: @laptop-width) {
+    font-size: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 19px;
+  }
 }

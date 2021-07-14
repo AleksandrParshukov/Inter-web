@@ -155,7 +155,7 @@
           </section>
         </li>
 
-        <li class="slider__item slider__item--current" value="2">
+        <li class="slider__item">
           <section class="services">
             <div class="services__wrapper wrapper">
               <h2 class="services__title">Наши услуги</h2>
@@ -223,7 +223,7 @@
               <ul class="services__content">
                 <li class="service">
                   <ul class="service__list hor-slider">
-                    <li class="service__item hor-slider__item hor-slider__item--current">
+                    <li class="service__item hor-slider__item">
                       <div class="service__wrapper wrapper">
                         <p class="service__caption">
                           Созданные экспертами «Inter-web» сайты интернет-магазинов 
@@ -292,7 +292,7 @@
 
                     <li class="service__item gallery hor-slider__item">
                       <div class="gallery__wrapper wrapper">
-                        <p class="gallery__title">Интернет-магазин под ключ</p>
+                        <p class="gallery__title">Примеры работ</p>
                         <a class="service__link service__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
                         
                         <div class="gallery__container">
@@ -318,18 +318,98 @@
         </li>
 
         <li class="slider__item">
-          <section class="stages"> 
-            <div class="stages__wrapper wrapper">
-              <h2 class="stages__title">Порядок работы</h2>
-              <p class="stages__text">
+          <section class="procedure"> 
+            <div class="procedure__wrapper wrapper">
+              <h2 class="procedure__title">Порядок работы</h2>
+              <p class="procedure__text">
                 Вы можете связаться с нами любым удобным для вас способом.<br>
                 Мы всегда готовы ответить в любое время
               </p>
               <picture>
-                <source media="(min-width:1200px)" srcset="./img/stages-desktop.png">
-                <img class="stages__image" src="./img/stages-mobile.png" alt="Этапы работы">
+                <source media="(min-width:1200px)" srcset="./img/procedure-desktop.png">
+                <img class="procedure__image" src="./img/procedure-mobile.png" alt="Этапы работы">
               </picture>
             </div>
+          </section>
+        </li>
+
+        <li class="slider__item slider__item--current">
+          <section class="stages"> 
+            <h2 class="stages__title">Этапы работы</h2>
+            <ul class="stages__list hor-slider">
+              <li class="stages__item hor-slider__item meeting">
+                <div class="stages__wrapper wrapper">
+                  <h3 class="meeting__title">Знакомство</h3>
+                  
+                  <img class="task__image stages__image" src="./img/stages-img1.png" width="568" height="646" alt="">
+                  <p class="meeting__text stages__text">
+                    <span class="meeting__num">01</span><br>
+                    Мы знакомимся с Вашим бизнесом, собираем всю необходимую информацию.
+                  </p>
+  
+                  <a class="stages__link stages__link--next hor-slider__link--next" href="#">Техническое задание</a>
+                 </div>
+              </li>
+
+              <li class="stages__item hor-slider__item task">
+                <div class="stages__wrapper wrapper">
+                  <h3 class="task__title">Техническое задание</h3>
+                  
+                  <img class="task__image stages__image" src="./img/stages-img2.png" width="568" height="646" alt="">
+                  <p class="task__text stages__text">
+                    <span class="task__num">02</span><br>
+                    Формируем стуктуру под целевые запросы, прописываем особенности и функционал.
+                  </p>
+  
+                  <a class="stages__link stages__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                  <a class="stages__link stages__link--next hor-slider__link--next" href="#">Реализация</a>
+                 </div>
+              </li>
+
+              <li class="stages__item hor-slider__item realization">
+                <div class="stages__wrapper wrapper">
+                  <h3 class="realization__title">Реализация</h3>
+                  
+                  <img class="task__image stages__image" src="./img/stages-img3.png" width="568" height="646" alt="">
+                  <p class="realization__text stages__text">
+                    <span class="realization__num">03</span><br>
+                    Воплощаем проект в жизнь. Активная работа специалистов каждой сферы.
+                  </p>
+  
+                  <a class="stages__link stages__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                  <a class="stages__link stages__link--next hor-slider__link--next" href="#">Тестирование</a>
+                 </div>
+              </li>
+
+              <li class="stages__item hor-slider__item testing">
+                <div class="stages__wrapper wrapper">
+                  <h3 class="testing__title">Тестирование</h3>
+                  
+                  <img class="task__image stages__image" src="./img/stages-img4.png" width="568" height="646" alt="">
+                  <p class="testing__text stages__text">
+                    <span class="testing__num">04</span><br>
+                    Проверяем и тестируем качество выполненной работы, исправляем все недочеты.
+                  </p>
+  
+                  <a class="stages__link stages__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                  <a class="stages__link stages__link--next hor-slider__link--next" href="#">Запуск проекта</a>
+                 </div>
+              </li>
+
+              <li class="stages__item hor-slider__item launch">
+                <div class="stages__wrapper wrapper">
+                  <h3 class="launch__title">Запуск проекта </h3>
+                  
+                  <img class="task__image stages__image" src="./img/stages-img5.png" width="568" height="646" alt="">
+                  <p class="launch__text stages__text">
+                    <span class="launch__num">05</span><br>
+                    Успешный запуск Вашего проекта и дальнейшая его поддержка командой специалистов.
+                  </p>
+  
+                  <a class="stages__link stages__link--prev hor-slider__link--prev" href="#">Вернуться назад</a>
+                 </div>
+              </li>
+            </ul>
           </section>
         </li>
 
@@ -488,7 +568,7 @@
           <section class="page-footer">
             <div class="page-footer__wrapper">
               <div class="page-footer__nav footer-nav">
-                <div class="footer-nav__wrapper">
+                <div class="footer-nav__wrapper wrapper">
                   <h2 class="visually-hidden">Навигация по сайту</h2>
                   <div class="footer-nav__list-container">
                     <p class="footer-nav__name">Клиентам</p>
@@ -532,7 +612,7 @@
               </div>
       
               <div class="page-footer__contacts contacts">
-                <div class="contacts__wrapper">
+                <div class="contacts__wrapper wrapper">
                   <h2 class="contacts__title">Обсудить Ваш проект</h2>
                   <form class="contacts__form">
                     <label class="visually-hidden" for="name">Имя</label>
@@ -625,6 +705,9 @@
             <button class="slider-nav__radio"></button>
           </li>
           <li class="slider-nav__item" value="7">
+            <button class="slider-nav__radio"></button>
+          </li>
+          <li class="slider-nav__item" value="8">
             <button class="slider-nav__radio"></button>
           </li>
         </ol>

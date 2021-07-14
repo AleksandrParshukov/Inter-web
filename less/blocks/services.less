@@ -9,8 +9,8 @@
   @media (min-width: @laptop-width) {
     background-color: #090F14;
     background-image: url("../img/services-bg-desktop.png");
-    background-size: auto 100%;
-    background-position: right top;
+    background-size: 926px 100%;
+    background-position: right bottom;
   }
 }
 
@@ -130,9 +130,14 @@
   height: 100%;
   padding: 0;
   margin: 0;
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 32%;
   right: 0;
+
+  @media (min-width: @desktop-width) {
+    display: revert;
+  }
 }

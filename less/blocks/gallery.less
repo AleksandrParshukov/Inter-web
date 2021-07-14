@@ -1,0 +1,130 @@
+.gallery {
+  background-image: url("../img/services-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 206px 300px;
+  background-position: right 126px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @laptop-width) {
+    background-color: #090F14;
+    background-image: url("../img/services-bg-desktop.png");
+    background-size: auto 100%;
+    background-position: right top;
+  }
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-start;
+  
+  @media (min-width: @laptop-width) {
+    padding: 165px 20px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 205px 100px 85px;
+  }
+}
+
+.gallery__title {
+  font-weight: 600;
+  line-height: 165%;
+  text-align: center;
+  flex-basis: 100%;
+
+  @media (min-width: @laptop-width) {
+    font-size: 40px;
+    margin: 0 0 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 55px;
+    margin: 0 0 115px;
+  }
+}
+
+.gallery__container {
+  margin-left: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: @laptop-width) {
+    font-size: 40px;
+    width: 541px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 55px;
+    width: 907px;
+  }
+}
+
+.gallery__list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+
+  @media (min-width: @laptop-width) {
+    margin: 0 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 64px;
+  }
+}
+
+.gallery__item {
+  flex: 1 0;
+}
+
+.gallery__image {
+  @media (min-width: @laptop-width) {
+    width: 258px;
+    height: 336px;
+    margin-right: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 391px;
+    height: 510px;
+    margin-right: 125px;
+  }
+}
+
+.gallery__link {
+  position: relative;
+
+  @media (min-width: @laptop-width) {
+    &--prev {
+      padding-left: 60px;
+      margin: 0 25px 0 198px;
+      .arrow-left(60px, @basic-white, 0);
+    }
+  
+    &--next {
+      padding-right: 120px;
+      margin-right: auto;
+      .arrow-right(120px, @basic-white, 0);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--prev {
+      padding-left: 80px;
+      margin: 0 125px 0 311px;
+      .arrow-left(80px, @basic-white, 0);
+    }
+  
+    &--next {
+      padding-right: 160px;
+      margin-right: auto;
+      .arrow-right(160px, @basic-white, 0);
+    }
+  }
+}

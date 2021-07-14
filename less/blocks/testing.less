@@ -1,0 +1,36 @@
+.testing {
+  position: relative;
+}
+
+.testing__title {
+  font-family: 'Noto Serif', serif;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0;
+
+  @media (min-width: @laptop-width) {
+    font-size: 85px;
+    position: absolute;
+    top: 250px;
+    left: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 125px;
+    margin-top: 405px;
+  }
+}
+
+.testing__text {
+  @media (min-width: @laptop-width) {
+    margin-top: 300px;  
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 405px;
+  }
+}
+
+.testing__num {
+  color: #D664BB;
+}

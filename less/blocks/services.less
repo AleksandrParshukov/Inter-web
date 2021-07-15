@@ -6,11 +6,19 @@
   position: relative;
   overflow: hidden;
 
+  @media (min-width: @tablet-width) {
+    background-size: 378px 550px;
+  }
+
   @media (min-width: @laptop-width) {
     background-color: #090F14;
     background-image: url("../img/services-bg-desktop.png");
     background-size: 926px 100%;
     background-position: right bottom;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 1303px 100%;
   }
 }
 
@@ -130,14 +138,14 @@
   height: 100%;
   padding: 0;
   margin: 0;
-  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 32%;
+  left: 100%;
   right: 0;
+  transition: left 0.3s;
 
-  @media (min-width: @desktop-width) {
-    display: revert;
+  @media (min-width: @laptop-width) {
+    left: 32%;
   }
 }

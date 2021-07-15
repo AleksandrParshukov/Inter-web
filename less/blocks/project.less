@@ -1,0 +1,137 @@
+.project {
+  background-color: @basic-black;
+
+  @media (min-width: @laptop-width) {
+    min-height: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 1080px;
+  }
+}
+
+.project__wrapper {
+  min-height: inherit;
+  padding: 50px 27px 135px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 50px 100px;
+  }
+
+  @media (min-width: @laptop-width) {
+    padding: 60px 20px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 100px 50px;
+  }
+}
+
+.project__title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  flex-basis: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: @laptop-width) {
+    font-size: 45px;
+    margin: 0 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 75px;
+    margin: 0 0 110px;
+  }
+}
+
+.project__menu {
+  margin: 60px 0 90px;
+
+  & a {
+    font-size: 14px;
+  }
+
+  @media (min-width: @laptop-width) {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 165px;
+    right: 100px;
+  }
+}
+
+.project__image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  @media (min-width: @laptop-width) {
+    width: 787px;
+    height: 428px;
+    margin: 0 45px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1195px;
+    height: 650px;
+    margin-right: 85px;
+  }
+}
+
+.project__text {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 165%;
+  margin: 50px 0 70px;
+  flex: 1 0 100%;
+
+  @media (min-width: @laptop-width) {
+    font-size: 16px;
+    margin: 0;
+    flex: 1 0 230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 22px;
+    flex: 1 0 330px;
+  }
+}
+
+.project__back {
+  font-weight: 400;
+  font-size: 12px;
+  color: @basic-white;
+  text-decoration: none;
+  position: relative;
+  padding-left: 35px;
+  .arrow-left(25px, @basic-white, 0px);
+
+  @media (min-width: @laptop-width) {
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 30px;
+    margin-top: 30px;
+    .arrow-left(20px, @basic-white, 0px);
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 35px;
+    margin-top: 30px;
+    .arrow-left(25px, @basic-white, 0px);
+  }
+}

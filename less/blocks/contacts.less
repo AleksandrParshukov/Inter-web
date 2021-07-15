@@ -15,11 +15,16 @@
   padding: 30px 27px 85px;
   box-sizing: border-box;
 
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
   @media (min-width: @laptop-width) {
     width: 350px;
     padding: 60px 35px 80px 30px;
     margin-left: 200px;
     background-color: @basic-purple;
+    position: static;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,7 +45,12 @@
   padding: 0;
   margin: 50px 0 75px;
 
+  @media (min-width: @tablet-width) {
+    width: 210px;
+  }
+
   @media (min-width: @laptop-width) {
+    width: auto;
     margin: 30px 0 40px;
   }
 
@@ -146,11 +156,16 @@
 .contacts__map-container {
   margin-left: -27px;
 
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 30px;
+    right: 27px;
+  }
+
   @media (min-width: @laptop-width) {
     width: 43px;
     height: 100%;
     margin: 0;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 3;

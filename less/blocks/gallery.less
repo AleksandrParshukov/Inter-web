@@ -1,4 +1,5 @@
 .gallery {
+  background-color: #090F14;
   background-image: url("../img/services-bg-mobile.png");
   background-repeat: no-repeat;
   background-size: 206px 300px;
@@ -7,7 +8,6 @@
   overflow: hidden;
 
   @media (min-width: @laptop-width) {
-    background-color: #090F14;
     background-image: url("../img/services-bg-desktop.png");
     background-size: auto 100%;
     background-position: right top;
@@ -15,10 +15,15 @@
 }
 
 .gallery__wrapper {
+  padding: 70px 27px 85px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   align-content: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 50px 100px;
+  }
   
   @media (min-width: @laptop-width) {
     padding: 165px 20px 55px;
@@ -31,13 +36,14 @@
 
 .gallery__title {
   font-weight: 600;
+  font-size: 20px;
   line-height: 165%;
-  text-align: center;
   flex-basis: 100%;
 
   @media (min-width: @laptop-width) {
     font-size: 40px;
     margin: 0 0 65px;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -47,14 +53,15 @@
 }
 
 .gallery__container {
-  margin-left: 180px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 85px 0 100px;
 
   @media (min-width: @laptop-width) {
     font-size: 40px;
     width: 541px;
+    margin: 0 0 0 180px;
   }
 
   @media (min-width: @desktop-width) {
@@ -67,8 +74,13 @@
   list-style: none;
   width: 100%;
   padding: 0;
+  margin: 0 0 50px;
   overflow: hidden;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 45px;
+  }
 
   @media (min-width: @laptop-width) {
     margin: 0 0 35px;
@@ -84,6 +96,16 @@
 }
 
 .gallery__image {
+  width: 138px;
+  height: 180px;
+  margin-right: 45px;
+
+  @media (min-width: @tablet-width) {
+    width: 309px;
+    height: 403px;
+    margin-right: 50px;
+  }
+
   @media (min-width: @laptop-width) {
     width: 258px;
     height: 336px;
@@ -99,6 +121,32 @@
 
 .gallery__link {
   position: relative;
+
+  &--prev {
+    padding-left: 30px;
+    margin: 0 45px 0 108px;
+    .arrow-left(30px, @basic-white, 0);
+  }
+
+  &--next {
+    padding-right: 75px;
+    margin-right: auto;
+    .arrow-right(75px, @basic-white, 0);
+  }
+
+  @media (min-width: @tablet-width) {
+    &--prev {
+      padding-left: 45px;
+      margin: 0 50px 0 264px;
+      .arrow-left(45px, @basic-white, 0);
+    }
+  
+    &--next {
+      padding-right: 90px;
+      margin-right: auto;
+      .arrow-right(90px, @basic-white, 0);
+    }
+  }
 
   @media (min-width: @laptop-width) {
     &--prev {
@@ -126,5 +174,13 @@
       margin-right: auto;
       .arrow-right(160px, @basic-white, 0);
     }
+  }
+}
+
+.gallery__link {
+  order: 3;
+
+  @media (min-width: @laptop-width) {
+    order: 0;
   }
 }

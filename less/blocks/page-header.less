@@ -5,6 +5,7 @@
   grid-row-start: 1;
   grid-row-end: 2;
   z-index: 2;
+  position: relative;
 
   @media (min-width: @laptop-width) {
     background: rgba(6, 9, 13, 0.6);
@@ -18,6 +19,10 @@
 .page-header__wrapper {
   padding: 30px 27px 0;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
 
   @media (min-width: @laptop-width) {
     align-items: center;

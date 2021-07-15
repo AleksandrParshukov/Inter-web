@@ -1,6 +1,17 @@
 .main-nav {
   order: 3;
 
+  &--open {
+    padding: 40px 27px 110px;
+    background-color: @basic-black;
+    background-image: url('../img/noise.png');
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   @media (min-width: @laptop-width) {
     margin: 0 auto;
     order: 0;
@@ -12,6 +23,19 @@
   padding: 0;
   margin: 0;
   display: none;
+
+  &--open {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+
+    & .main-nav__item {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+  }
 
   @media (min-width: @laptop-width) {
     display: flex;
@@ -27,7 +51,6 @@
   background-color: @basic-white;
   border: none;
   border-radius: 5px;
-  position: relative;
 
   &::before, 
   &::after {
@@ -37,16 +60,44 @@
     background-color: @basic-white;
     border: none;
     border-radius: 5px;
-    position: absolute;
-    left: 0;
+    display: block;
   }
 
   &::before {
-    top: -4px;
+    margin-top: 4px;
   }
 
   &::after {
-    bottom: -4px;
+    margin-top: 2px;
+  }
+
+  &--open {
+    margin: 0 0 0 auto;
+    background-color: transparent;
+    position: relative;
+
+    &::before, 
+    &::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      margin: 0;
+      background-color: @basic-white;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    &::before {
+      transform: rotate(-45deg);
+    }
+  
+    &::after {
+      transform: rotate(45deg);
+    }
   }
 
   @media (min-width: @laptop-width) {

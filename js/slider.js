@@ -1,4 +1,4 @@
-const WHEEL_TICKS = 7;
+const WHEEL_TICKS = 12;
 
 const pageHeader = document.querySelector('.page-header')
 const pageMain = document.querySelector('.page-main');
@@ -80,7 +80,16 @@ if (window.innerWidth >= 1200) {
     sliderNavItems[index].firstElementChild.classList.add('slider-nav__radio--current');
 
     slider.style.transform = `translateY(${-offset[index]}px)`;
+    slider.scrollIntoView({
+      behavior: "smooth",
+    });
     slider.style.height = `${sliderItems[index].scrollHeight}px`;
+
+    if (sliderItems[index].querySelector('.portfolio__content')) {
+      if (sliderItems[index].querySelector('.portfolio__content').style.display === 'flex') {
+        pageHeader.classList.add('page-header--closed');
+      }
+    }
 
     if (index === sliderNavItems.length - 1) {
       sliderBtnNext.disabled = true;

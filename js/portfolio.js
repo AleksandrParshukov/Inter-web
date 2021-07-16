@@ -22,7 +22,7 @@ landingPageBtns.forEach((button) => {
 portfolioBack.addEventListener('click', (evt) => {
   evt.preventDefault();
   portfolioContent.style.display = 'none';
-  pageHeader.classList.remove('page-header--closed');
+    pageHeader.classList.remove('page-header--closed');
   updateHeight(-1);
 });
 

@@ -302,8 +302,8 @@ html {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 @media (min-width: 1200px) {
   .page-header {
@@ -1975,7 +1975,6 @@ html {
 }
 .stages {
   width: 100%;
-  padding: 150px 0 0;
   background-color: #1D1D1D;
   background-image: url("../img/noise.png");
   box-sizing: border-box;
@@ -1983,7 +1982,13 @@ html {
 }
 @media (min-width: 1200px) {
   .stages {
+    padding: 120px 0 0;
     display: revert;
+  }
+}
+@media (min-width: 1880px) {
+  .stages {
+    padding: 150px 0 0;
   }
 }
 .stages__list {
@@ -2001,7 +2006,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-content: flex-start;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .stages__wrapper {
@@ -2243,14 +2249,14 @@ html {
     font-size: 60px;
     position: absolute;
     top: 300px;
-    left: 200px;
+    left: 150px;
   }
 }
 @media (min-width: 1880px) {
   .task__title {
     font-size: 95px;
     top: 260px;
-    left: 142px;
+    left: 42px;
   }
 }
 @media (min-width: 1200px) {
@@ -2280,8 +2286,8 @@ html {
   .realization__title {
     font-size: 85px;
     position: absolute;
-    top: 160px;
-    left: 400px;
+    top: 130px;
+    left: 300px;
   }
 }
 @media (min-width: 1880px) {
@@ -2316,13 +2322,14 @@ html {
   .testing__title {
     font-size: 85px;
     position: absolute;
-    top: 250px;
-    left: 290px;
+    top: 210px;
+    left: 190px;
   }
 }
 @media (min-width: 1880px) {
   .testing__title {
     font-size: 125px;
+    top: 250px;
   }
 }
 @media (min-width: 1200px) {
@@ -2353,19 +2360,19 @@ html {
     font-size: 70px;
     position: absolute;
     top: 205px;
-    left: 490px;
+    left: 390px;
   }
 }
 @media (min-width: 1880px) {
   .launch__title {
     font-size: 100px;
     top: 285px;
-    left: 890px;
+    left: 790px;
   }
 }
 @media (min-width: 1200px) {
   .launch__text {
-    margin-top: 400px;
+    margin-top: 350px;
   }
 }
 @media (min-width: 1880px) {
@@ -2651,7 +2658,6 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 3;
 }
 .portfolio__content-list {
   list-style: none;
@@ -2966,7 +2972,7 @@ html {
 @media (min-width: 1200px) {
   .project__title {
     font-size: 45px;
-    margin: 0 0 60px;
+    margin: 0 0 80px;
   }
 }
 @media (min-width: 1880px) {
@@ -2983,6 +2989,7 @@ html {
 }
 @media (min-width: 1200px) {
   .project__menu {
+    margin: 0;
     position: absolute;
     top: 75px;
     right: 20px;

@@ -1,13 +1,17 @@
 .stages {
   width: 100%;
-  padding: 150px 0 0;
   background-color: #1D1D1D;
   background-image: url("../img/noise.png");
   box-sizing: border-box;
   display: none;
   
   @media (min-width: @laptop-width) {
+    padding: 120px 0 0;
     display: revert;
+  }
+  
+  @media (min-width: @desktop-width) {
+    padding: 150px 0 0;
   }
 }
 
@@ -28,7 +32,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-content: flex-start;
+  position: relative;
   
   @media (min-width: @laptop-width) {
     padding: 45px 100px 20px 235px;

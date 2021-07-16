@@ -1,6 +1,20 @@
 .news {
   width: 100%;
   background-image: url("../img/noise.png");
+  overflow: hidden;
+}
+
+.news__slider {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.news__slide {
+  flex: 1 0 100%;
 }
 
 .news__wrapper {
@@ -72,12 +86,18 @@
     right: -32px;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+
+  &--open {
+    &::after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
   }
 
   @media (min-width: @laptop-width) {
     font-weight: 600;
     font-size: 24px;
-    margin: 0 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -92,8 +112,9 @@
 
 .news__menu {
   list-style: none;
-  padding: 0;
+  padding: 30px 80px 30px 15px;
   margin: 0;
+  background-color: @basic-purple;
   position: absolute;
   top: 100%;
   left: 0;
@@ -103,7 +124,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
     margin: 0;
+    background-color: transparent;
     position: static;
 
     &--closed {
@@ -128,6 +151,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 165%;
+  color: @basic-white;
+  text-decoration: none;
 
   &:hover,
   &:focus {

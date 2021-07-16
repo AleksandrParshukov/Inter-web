@@ -56,7 +56,7 @@ services.addEventListener('touchstart', (evt) => {
 services.addEventListener('touchend', serviceSwipeHandle);
 
 function serviceSwipeHandle(evt) {
-  const slider = services.querySelector('.hor-slider');
+  const slider = services.querySelector('.service--current').querySelector('.hor-slider');
   const lenght = evt.changedTouches[0].clientX - xStart;
 
   if (isSwipeLeft(lenght)) {

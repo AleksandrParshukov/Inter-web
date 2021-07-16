@@ -1,5 +1,10 @@
 .service {
   height: 100%;
+  display: none;
+  
+  &--current {
+    display: revert;
+  }
 }
 
 .service__list {
@@ -22,6 +27,8 @@
   }
 
   @media (min-width: @laptop-width) {
+    height: 100%;
+
     &:first-child {
       display: flex;
     }
@@ -124,35 +131,36 @@
   }
   
   &--next {
+    text-decoration: underline;
     padding-right: 40px;
     .arrow-right(30px, @basic-white, 0px);
   }
 
   @media (min-width: @laptop-width) {
-    font-size: 16px;
-    line-height: 25px;
-  
     &--prev {
+      font-size: 15px;
+      line-height: 23px;
       padding-left: 65px;
       .arrow-left(45px, @basic-white, 0px);
     }
     
     &--next {
+      font-size: 16px;
+      line-height: 25px;
       padding-right: 65px;
       .arrow-right(45px, @basic-white, 0px);
     }
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 22px;
-    line-height: 33px;
-  
     &--prev {
       padding-left: 85px;
       .arrow-left(55px, @basic-white, 0px);
     }
     
     &--next {
+      font-size: 22px;
+      line-height: 33px;
       padding-right: 85px;
       .arrow-right(55px, @basic-white, 0px);
     }

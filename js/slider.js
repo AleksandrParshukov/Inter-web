@@ -9,6 +9,7 @@ const sliderNavList = sliderNav.querySelector('.slider-nav__list');
 const sliderNavItems = sliderNavList.querySelectorAll('.slider-nav__item');
 const sliderBtnPrev = sliderNav.querySelector('.slider-nav__button--prev');
 const sliderBtnNext = sliderNav.querySelector('.slider-nav__button--next');
+const navLinks = document.querySelectorAll('.nav-link');
 
 if (window.innerWidth >= 1200) {
   let currentIndex = 0;
@@ -61,6 +62,14 @@ if (window.innerWidth >= 1200) {
     })
   });
 
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      currentIndex = link.parentElement.value;
+      updateSliderList(currentIndex);
+    })
+  });
+
   function updateSliderList(index) {
     sliderBtnNext.disabled = false;
     sliderBtnPrev.disabled = false;
@@ -82,4 +91,17 @@ if (window.innerWidth >= 1200) {
       sliderBtnPrev.disabled = true;
     }
   }
+} else {
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      sliderItems[link.parentElement.value].scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      mainNav.classList.remove('main-nav--open');
+      mainNavList.classList.remove('main-nav__list--open');
+      mainNavBtn.classList.remove('main-nav__button--open');
+    })
+  });
 }

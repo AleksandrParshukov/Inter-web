@@ -1,7 +1,9 @@
 const WHEEL_TICKS = 12;
+const SLIDER_NAV_RIGHT = 90;
 
-const pageHeader = document.querySelector('.page-header')
-const pageMain = document.querySelector('.page-main');
+const pageBody = document.querySelector('.page-body');
+const pageHeader = pageBody.querySelector('.page-header')
+const pageMain = pageBody.querySelector('.page-main');
 const slider = pageMain.querySelector('.slider');
 const sliderItems = slider.querySelectorAll('.slider__item');
 const sliderNav = pageMain.querySelector('.slider-nav');
@@ -9,7 +11,15 @@ const sliderNavList = sliderNav.querySelector('.slider-nav__list');
 const sliderNavItems = sliderNavList.querySelectorAll('.slider-nav__item');
 const sliderBtnPrev = sliderNav.querySelector('.slider-nav__button--prev');
 const sliderBtnNext = sliderNav.querySelector('.slider-nav__button--next');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = pageBody.querySelectorAll('.nav-link');
+
+pageBody.style.width = `${window.innerWidth}px`;
+sliderNav.style.left = `${window.innerWidth - sliderNav.clientWidth - SLIDER_NAV_RIGHT}px`;
+
+pageBody.addEventListener('resize', (evt) => {
+  pageBody.style.width = `${window.innerWidth}px`;
+  sliderNav.style.left = `${window.innerWidth - sliderNav.clientWidth - SLIDER_NAV_RIGHT}px`;
+})
 
 if (window.innerWidth >= 1200) {
   let currentIndex = 0;

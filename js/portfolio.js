@@ -58,7 +58,6 @@ function updateHeight (index) {
   if (index === -1) {
     portfolio.style.height = '';
   } else {
-    console.log(portfolioContentList.children[index].scrollHeight);
     portfolio.style.height = `${portfolioContentList.children[index].scrollHeight}px`;
   }
 }

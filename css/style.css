@@ -140,6 +140,7 @@
 }
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 .page-body {
   font-family: 'Noto Sans', 'Arial', sans-serif;
@@ -586,12 +587,10 @@ html {
   .slider-nav {
     display: flex;
     top: 240px;
-    right: 70px;
   }
 }
 @media (min-width: 1880px) {
   .slider-nav {
-    right: 110px;
     top: 350px;
   }
 }
@@ -3740,7 +3739,7 @@ html {
 @media (min-width: 1200px) {
   .contacts__form {
     width: auto;
-    margin: 50px 0 155px;
+    margin: 40px 0 105px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

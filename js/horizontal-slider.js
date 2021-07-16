@@ -26,13 +26,28 @@ sliders.forEach((slider) => {
     })
   })
 
+  slider.addEventListener('mousedown', (evt) => {
+    xStart = evt.screenX;
+  })
+  
+  slider.addEventListener('mouseup', (evt) => {
+    const lenght = evt.screenX - xStart;
+    console.log(lenght);
+    touchendHandler(lenght);
+  })
+
   slider.addEventListener('touchstart', (evt) => {
     xStart = evt.changedTouches[0].clientX;
   })
   
   slider.addEventListener('touchend', (evt) => {
     const lenght = evt.changedTouches[0].clientX - xStart;
+    console.log(lenght);
+    touchendHandler(lenght);
+  })
 
+
+  function touchendHandler(lenght) {
     if (isSwipeLeft(lenght) && currentIndex != slider.children.length - 2) {
       currentIndex++;
       updateSliderList(slider, currentIndex);
@@ -43,11 +58,20 @@ sliders.forEach((slider) => {
         currentIndex--;
       }
       updateSliderList(slider, currentIndex);
-    }
-  })
 
-  
+      if (currentIndex === -1) {
+        currentIndex = 0;
+      }
+
+    }
+  }
 })
+
+services.addEventListener('mousedown', (evt) => {
+  xStart = evt.screenX;
+})
+
+services.addEventListener('mouseup', serviceSwipeHandle);
 
 services.addEventListener('touchstart', (evt) => {
   xStart = evt.changedTouches[0].clientX;
@@ -57,11 +81,12 @@ services.addEventListener('touchend', serviceSwipeHandle);
 
 function serviceSwipeHandle(evt) {
   const slider = services.querySelector('.service--current').querySelector('.hor-slider');
-  const lenght = evt.changedTouches[0].clientX - xStart;
+  const lenght = evt.changedTouches ? evt.changedTouches[0].clientX - xStart : evt.screenX - xStart;
 
   if (isSwipeLeft(lenght)) {
     updateSliderList(slider, 0);
     services.removeEventListener('touchend', serviceSwipeHandle);
+    services.removeEventListener('mouseup', serviceSwipeHandle);
   }
 }
   
@@ -74,6 +99,7 @@ function isSwipeRight(length) {
 }
 
 function updateSliderList(slider, index) {
+  console.log(`translateX(${-100*index}%)`);
   slider.style.transform = `translateX(${-100*index}%)`;
 
   if (slider.classList.contains('service__list')) {
@@ -89,6 +115,7 @@ function updateSliderList(slider, index) {
       if (index === -1) {
         serviceContent.style.left = '100%';
         services.addEventListener('touchend', serviceSwipeHandle);
+        services.addEventListener('mouseup', serviceSwipeHandle);
         services.style.height = 'auto';
       } else {
         serviceContent.style.left = '0';

@@ -22,7 +22,6 @@ modalList.forEach((modal) => {
   const modalClose = modal.querySelector('.modal__close');
   modalClose.addEventListener('click', (evt) => {
     evt.preventDefault();
-    console.log(modalClose)
     modal.classList.add('modal--close');
   })
 });

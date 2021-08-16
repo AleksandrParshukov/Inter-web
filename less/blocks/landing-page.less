@@ -29,7 +29,7 @@
 
   @media (min-width: @desktop-width) {
     height: 100%;
-    padding: 115px 100px 65px;
+    padding: 80px 100px 65px;
   }
 }
 
@@ -77,25 +77,36 @@
   }
 }
 
+.landing-page__slider-wrapper {
+  flex: 1 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
 .landing-page__list {
   list-style: none;
   width: 100%;
   padding: 0;
-  margin: 60px 0 0;
+  margin: 60px 0 30px;
+  flex: 1 0 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  transition: transform 0.3s;
 
   @media (min-width: @tablet-width) {
     margin: 70px 0 0;
   }
 
   @media (min-width: @laptop-width) {
-    margin: 100px 0 0;
+    margin: 60px 0 30px;
+    flex-wrap: nowrap;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 150px 20px 0;
+    margin: 120px 0 30px;
   }
 }
 
@@ -111,16 +122,12 @@
   }
 
   @media (min-width: @laptop-width) {
-    margin: 0 60px 0 0;
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
+    margin: 0 80px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 748px;
-    margin-right: 140px;
+    margin-right: 92px;
   }
 }
 
@@ -239,5 +246,48 @@
     margin-top: 18px;
     background-image: url("../img/scroll.svg");
     display: block;
+  }
+}
+
+
+.landing-page__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: @basic-white;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  display: none;
+
+  &--prev {
+    text-align: start;
+    padding-left: 65px;
+    margin-right: auto;
+    .arrow-left(45px, @basic-white, 0px);
+  }
+  
+  &--next {
+    text-align: end;
+    padding-right: 65px;
+    margin: 0 80px 0 auto;
+    .arrow-right(45px, @basic-white, 0px);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @laptop-width) {
+    display: revert;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--next {
+      margin: 0 92px 0 auto;
+    }
   }
 }

@@ -4,11 +4,13 @@ const services = document.querySelector('.services');
 const sliders = document.querySelectorAll('.hor-slider');
 
 sliders.forEach((slider) => {
-  const buttonsNext = slider.querySelectorAll('.hor-slider__link--next');
-  const buttonsPrev = slider.querySelectorAll('.hor-slider__link--prev');
+  const buttonsNext = slider.parentElement.querySelectorAll('.hor-slider__link--next');
+  const buttonsPrev = slider.parentElement.querySelectorAll('.hor-slider__link--prev');
 
   let currentIndex = 0;
   let xStart = 0;
+
+  updateSliderList(slider, currentIndex);
 
   buttonsNext.forEach((button) => {
     button.addEventListener('click', (evt) => {
@@ -99,7 +101,6 @@ function isSwipeRight(length) {
 }
 
 function updateSliderList(slider, index) {
-  console.log(`translateX(${-100*index}%)`);
   slider.style.transform = `translateX(${-100*index}%)`;
 
   if (slider.classList.contains('service__list')) {
@@ -121,6 +122,33 @@ function updateSliderList(slider, index) {
         serviceContent.style.left = '0';
         services.style.height = `${slider.children[index+1].scrollHeight}px`;
       }
+    }
+  }
+
+  if (slider.classList.contains('clients__list') || slider.classList.contains('landing-page__list')) {
+    const buttonNext = slider.parentElement.querySelector('.hor-slider__link--next');
+    const buttonPrev = slider.parentElement.querySelector('.hor-slider__link--prev');
+    const childrenValue = slider.children.length;
+    
+    let sliderScreenValue;
+
+    if (slider.classList.contains('landing-page__list')) {
+      sliderScreenValue = Math.ceil(childrenValue / 2) - 1;
+    } else if (window.innerWidth >= 1880) {
+      sliderScreenValue = Math.ceil(childrenValue / 9) - 1;
+    } else {
+      sliderScreenValue = Math.ceil(childrenValue / 6) - 1;
+    }
+
+    buttonPrev.disabled = false;    
+    buttonNext.disabled = false;    
+
+    if (index === 0) {
+      buttonPrev.disabled = true;    
+    } 
+
+    if (index === sliderScreenValue) {
+      buttonNext.disabled = true;    
     }
   }
 }

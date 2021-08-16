@@ -1,6 +1,7 @@
 .article {
   width: 100%;
   height: min-content;
+  min-height: 100vh;
 }
 
 .article__wrapper {
@@ -13,7 +14,7 @@
   }
 
   @media (min-width: @laptop-width) {
-    padding: 105px 20px 20px;
+    padding: 105px 20px 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -81,7 +82,8 @@
   }
 
   @media (min-width: @laptop-width) {
-    flex: 1 0 300px;
+    height: auto;
+    flex: 1 0 350px;
   }
 
   @media (min-width: @desktop-width) {

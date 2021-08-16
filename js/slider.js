@@ -1,5 +1,5 @@
 const WHEEL_TICKS = 12;
-const SLIDER_NAV_RIGHT = 90;
+const SLIDER_NAV_RIGHT = 70;
 
 const pageBody = document.querySelector('.page-body');
 const pageHeader = pageBody.querySelector('.page-header')

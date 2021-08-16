@@ -115,6 +115,7 @@
           </section>
         </li>
 
+
         <li class="slider__item">
           <section class="about">
             <div class="about__wrapper wrapper">
@@ -157,6 +158,7 @@
             </div>
           </section>
         </li>
+
 
         <li class="slider__item">
           <section class="services">
@@ -1048,6 +1050,7 @@
           </section>
         </li>
 
+
         <li class="slider__item">
           <section class="procedure"> 
             <div class="procedure__wrapper wrapper">
@@ -1063,6 +1066,7 @@
             </div>
           </section>
         </li>
+
 
         <li class="slider__item">
           <section class="stages"> 
@@ -1144,50 +1148,57 @@
           </section>
         </li>
 
+
         <li class="slider__item">
           <section class="clients">
             <div class="clients__wrapper wrapper">
               <h2 class="clients__title">Наши клиенты</h2>
-              <ul class="clients__list">
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-                <li class="clients__item">
-                  <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
-                </li>
-              </ul>
+              <div class="clients__slider-wrapper">
+                <ul class="clients__list hor-slider">
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                  <li class="clients__item">
+                    <img class="clients__image" src="https://via.placeholder.com/328x137" width="328" height="137" alt="">
+                  </li>
+                </ul>
+  
+                <button class="clients__button clients__button--prev hor-slider__link--prev" type="button" disabled>Вернуться назад</button>
+                <button class="clients__button clients__button--next hor-slider__link--next" type="button">Другие клиенты</button>
+              </div>
       
               <div class="clients__description">
                 <p class="clients__text">
                   Поработали с такими компаниями, как банки, ритейл, 
                   автомобильными брендами,  и другими.
                 </p>
-                <a class="clients__link" href="">Стать нашим клиентом</a>
+                <a class="clients__link feedback-open" href="">Стать нашим клиентом</a>
               </div>
             </div>
           </section>
         </li>
+
 
         <li class="slider__item">
           <section class="portfolio">
@@ -1224,7 +1235,7 @@
                 </li>
               </ul>
             </div>
-
+            
             <div class="portfolio__content">
               <ul class="portfolio__content-list">
                 <li class="portfolio__content__item landing-page">
@@ -1259,38 +1270,70 @@
                       </li>
                     </ul>
   
-                    <ol class="landing-page__list">
-                      <li class="landing-page__item" value="1">
-                        <div class="landing-page__container">
-                          <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                          <div class="landing-page__description">
-                            <p class="landing-page__text">Название проекта</p>
-                            <p class="landing-page__text">Краткое описание</p>
+                    <div class="landing-page__slider-wrapper">
+                      <ol class="landing-page__list hor-slider">
+                        <li class="landing-page__item" value="1">
+                          <div class="landing-page__container">
+                            <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                            <div class="landing-page__description">
+                              <p class="landing-page__text">Название проекта</p>
+                              <p class="landing-page__text">Краткое описание</p>
+                            </div>
                           </div>
-                        </div>
-  
-                        <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                        <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                      </li>
-  
-                      <li class="landing-page__item" value="2">
-                        <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                        <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                        
-                        <div class="landing-page__container">
-                          <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
-                          <div class="landing-page__description">
-                            <p class="landing-page__text">Название проекта</p>
-                            <p class="landing-page__text">Краткое описание</p>
+    
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                        </li>
+    
+                        <li class="landing-page__item" value="2">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          
+                          <div class="landing-page__container">
+                            <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                            <div class="landing-page__description">
+                              <p class="landing-page__text">Название проекта</p>
+                              <p class="landing-page__text">Краткое описание</p>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ol>
+                        </li>
+  
+                        <li class="landing-page__item" value="3">
+                          <div class="landing-page__container">
+                            <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                            <div class="landing-page__description">
+                              <p class="landing-page__text">Название проекта</p>
+                              <p class="landing-page__text">Краткое описание</p>
+                            </div>
+                          </div>
+    
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                        </li>
+    
+                        <li class="landing-page__item" value="4">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          <img class="landing-page__image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                          
+                          <div class="landing-page__container">
+                            <img class="landing-page__main-image" src="./img/portfolio-img.jpg" width="748" height="407" alt="">
+                            <div class="landing-page__description">
+                              <p class="landing-page__text">Название проекта</p>
+                              <p class="landing-page__text">Краткое описание</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+  
+                      <button class="landing-page__link landing-page__link--prev hor-slider__link--prev" type="button" disabled>Вернуться назад</button>
+                      <button class="landing-page__link landing-page__link--next hor-slider__link--next" type="button">Другие клиенты</button>
+                    </div>
   
                     <button class="landing-page__button portfolio__back" type="button">Назад</button>
                   </div>
                 </li>
   
+
                 <li class="portfolio__content__item project">
                   <div class="project__wrapper wrapper">
                     <h3 class="project__title">Название Проекта</h3>
@@ -1330,6 +1373,87 @@
                   </div>
                 </li>
   
+
+                <li class="portfolio__content__item project">
+                  <div class="project__wrapper wrapper">
+                    <h3 class="project__title">Название Проекта</h3>
+                    <ul class="portfolio__list project__menu">
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Комплексное продвижение</a>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Медиа-маркетинг</a>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Веб-разработка</a>
+                        <ul class="portfolio__submenu submenu">
+                          <li class="submenu__item">
+                            <a class="submenu__link landing-page-btn" href="">Landing page</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Сайт-визитка</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Интернет-магазин</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Корпоративный сайт</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Брендинг</a>
+                      </li>
+                    </ul>
+  
+                    <img class="project__image" src="./img/project-img.jpg" width="1195" height="650" alt="">
+                    <p class="project__text">Описание проекта</p>
+                    
+                    <a class="project__back" href="">Вернуться назад</a>
+                  </div>
+                </li>
+  
+
+                <li class="portfolio__content__item project">
+                  <div class="project__wrapper wrapper">
+                    <h3 class="project__title">Название Проекта</h3>
+                    <ul class="portfolio__list project__menu">
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Комплексное продвижение</a>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Медиа-маркетинг</a>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Веб-разработка</a>
+                        <ul class="portfolio__submenu submenu">
+                          <li class="submenu__item">
+                            <a class="submenu__link landing-page-btn" href="">Landing page</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Сайт-визитка</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Интернет-магазин</a>
+                          </li>
+                          <li class="submenu__item">
+                            <a class="submenu__link" href="">Корпоративный сайт</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="portfolio__item">
+                        <a class="portfolio__link" href="">Брендинг</a>
+                      </li>
+                    </ul>
+  
+                    <img class="project__image" src="./img/project-img.jpg" width="1195" height="650" alt="">
+                    <p class="project__text">Описание проекта</p>
+                    
+                    <a class="project__back" href="">Вернуться назад</a>
+                  </div>
+                </li>
+  
+
                 <li class="portfolio__content__item project">
                   <div class="project__wrapper wrapper">
                     <h3 class="project__title">Название Проекта</h3>
@@ -1601,7 +1725,7 @@
                   </div>
       
                   <div class="contacts__map-container">
-                    <img class="contacts__map" src="./img/map.jpg" width="1145" height="1080" alt="Карта">
+                    <div class="contacts__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/pochtamtskiy_pereulok_8/Z0kYdQdiQEUCQFtjfXVycHpqZw==/?ll=30.304295%2C59.931259&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Почтамтский переулок, 8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUirJGfgC" style="width: 100%; height: 100%;" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
                     <button class="contacts__map-btn">Карта</button>
                   </div>
       

@@ -10,7 +10,9 @@ sliders.forEach((slider) => {
   let currentIndex = 0;
   let xStart = 0;
 
-  updateSliderList(slider, currentIndex);
+  if (!slider.classList.contains('service__list')) {
+    updateSliderList(slider, currentIndex);
+  }
 
   buttonsNext.forEach((button) => {
     button.addEventListener('click', (evt) => {
@@ -34,7 +36,6 @@ sliders.forEach((slider) => {
   
   slider.addEventListener('mouseup', (evt) => {
     const lenght = evt.screenX - xStart;
-    console.log(lenght);
     touchendHandler(lenght);
   })
 
@@ -44,7 +45,6 @@ sliders.forEach((slider) => {
   
   slider.addEventListener('touchend', (evt) => {
     const lenght = evt.changedTouches[0].clientX - xStart;
-    console.log(lenght);
     touchendHandler(lenght);
   })
 
@@ -133,12 +133,22 @@ function updateSliderList(slider, index) {
     let sliderScreenValue;
 
     if (slider.classList.contains('landing-page__list')) {
-      sliderScreenValue = Math.ceil(childrenValue / 2) - 1;
-    } else if (window.innerWidth >= 1880) {
-      sliderScreenValue = Math.ceil(childrenValue / 9) - 1;
+      if (window.innerWidth >= 1200) {
+        sliderScreenValue = Math.ceil(childrenValue / 2) - 1;
+      } else {
+        sliderScreenValue = 0;
+        slider.style.transform = `translateX(0%)`;
+      }
     } else {
-      sliderScreenValue = Math.ceil(childrenValue / 6) - 1;
-    }
+      if (window.innerWidth >= 1880) {
+        sliderScreenValue = Math.ceil(childrenValue / 9) - 1;
+      } else if (window.innerWidth >= 1200) {
+        sliderScreenValue = Math.ceil(childrenValue / 6) - 1;
+      } else {
+        sliderScreenValue = 0;
+        slider.style.transform = `translateX(0%)`;
+      }
+    } 
 
     buttonPrev.disabled = false;    
     buttonNext.disabled = false;    

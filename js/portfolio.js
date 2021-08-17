@@ -15,6 +15,7 @@ landingPageBtns.forEach((button) => {
       pageHeader.classList.add('page-header--closed');
     } 
     portfolioContentList.style.transform = `translateX(0%)`;
+    button.parentElement.parentElement.style.display = 'none';
     updateHeight(0);
   });
 })
